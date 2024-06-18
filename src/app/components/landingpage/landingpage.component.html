@@ -1,0 +1,68 @@
+<div class="main">
+    <section id="intro" class="text-gray-300">
+        <div>
+            <div class="md:text-6xl text-4xl sm:text-base">Pranjal Sharma</div>
+            <div class="mt-5 md:text-9xl text-4xl ux font-bold sm:text-2xl">UX Designer</div>
+        </div>
+        <mat-divider class="!mt-8 !mb-8"></mat-divider>
+        <div class="text-4xl">
+            IT'S A PLEASURE TO MEET YOU !
+        </div>
+        <div class="text-white text-base mt-4">
+            3+ years dedicated to crafting digital interface experiences for Gen AI. Merging UX psychology and emotional
+            resonance with strategic business acumen to create innovative and practical solutions.
+        </div>
+        <div class="frame-images mt-4">
+            <img src="../../../assets/images/FRAME1.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame1">
+            <img src="../../../assets/images/FRAME2.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame2">
+            <img src="../../../assets/images/FRAME3.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame3">
+            <img src="../../../assets/images/FRAME4.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame4">
+        </div>
+        <!-- <div class="text-center mt-4">
+            <div class="text-2xl">FRIENDLY REMINDER!</div>
+            <div class="text-4xl mt-2">Perfect portfolios don't exists.</div>
+        </div> -->
+    </section>
+    <mat-divider class="!mt-8 !mb-8"></mat-divider>
+    <section id="projects">
+        <div class="text-gray-300 text-6xl">Projects</div>
+        <mat-divider class="!mt-8 !mb-8"></mat-divider>
+        <div class="text-gray-300 text-center tracking-widest tracking-wide mb-12">
+            "TO BE A GOOD DESIGNER YOU MUST BE A GOOD ENGINEER IN EVERY SENSE:
+            BRAVE, CURIOUS & INQUISITIVE."<br><br> - CHARLES EAMES, 1949
+        </div>
+        @for(project of projects;track project)
+        {
+        <div id="project-cards" class="pb-10 h-4/5">
+            <mat-card class="!rounded-none shadow hover:cursor-pointer h-full">
+                <img matCardImage src="../../../assets/images/{{project.image}}">
+                <div class="bg-zinc-800 text-gray-300 p-3">
+                    <mat-card-header class="flex flex-row flex-nowrap justify-between">
+                        <mat-card-title class="text-white border-solid border-b-2">{{project.title}}</mat-card-title>
+                        <button mat-icon-button class="-mt-12 !bg-white hover:!bg-gray-50" matTooltip="View">
+                            <mat-icon class="!text-black hover:!text-white">arrow_forward</mat-icon>
+                        </button>
+                    </mat-card-header>
+                    <mat-card-content class="mt-2 text-white">
+                        {{project.text}}
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </div>
+        }
+
+    </section>
+    <mat-divider class="!mt-8 !mb-8"></mat-divider>
+    <section id="resume" class="cursor-pointer">
+        <a href="https://read.cv/pranjal1795" target="_blank"
+            class="text-gray-300 hover:border-solid hover:border-b-2"><span class="text-6xl">Resume</span><span>
+                <mat-icon inline="true" class="ml-4 !text-4xl">open_in_new</mat-icon></span></a>
+    </section>
+    <mat-divider class="!mt-8 !mb-8"></mat-divider>
+    <section id="contact" class="cursor-pointer">
+        <a href="https://www.linkedin.com/in/shr-pranjal" target="_blank"
+            class="text-gray-300 hover:border-solid hover:border-b-2"><span class="text-6xl">Contact Me</span><span>
+                <mat-icon inline="true" class="ml-4 !text-4xl">open_in_new</mat-icon></span></a>
+    </section>
+    <mat-divider class="!mt-8 !mb-8"></mat-divider>
+</div>

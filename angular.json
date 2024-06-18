@@ -29,9 +29,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },"src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -93,9 +94,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },"src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "22b5fcdf-592f-4c2e-baaf-4b9595d36b91"
   }
 }
