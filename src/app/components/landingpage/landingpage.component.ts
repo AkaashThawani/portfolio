@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgFor } from '@angular/common';
+import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Input, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 
 
@@ -18,7 +18,8 @@ import { Input, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    NgFor
+    NgFor,
+    NgOptimizedImage,
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',

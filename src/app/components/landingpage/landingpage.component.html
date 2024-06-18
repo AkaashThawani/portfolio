@@ -13,10 +13,10 @@
             resonance with strategic business acumen to create innovative and practical solutions.
         </div>
         <div class="frame-images mt-4">
-            <img src="../../../assets/images/FRAME1.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame1">
-            <img src="../../../assets/images/FRAME2.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame2">
-            <img src="../../../assets/images/FRAME3.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame3">
-            <img src="../../../assets/images/FRAME4.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame4">
+            <img src="../../../assets/images/FRAME1.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame1" placeholder>
+            <img src="../../../assets/images/FRAME2.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame2" placeholder>
+            <img src="../../../assets/images/FRAME3.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame3" placeholder>
+            <img src="../../../assets/images/FRAME4.png" class="md:h-48 md:w-48 sm:h-full sm:w-full" alt="frame4" placeholder>
         </div>
         <!-- <div class="text-center mt-4">
             <div class="text-2xl">FRIENDLY REMINDER!</div>
@@ -37,7 +37,7 @@
         @defer(on viewport){
         <div id="project-cards" class="mb-10 h-4/5 fade-slide-in pCard">
             <mat-card class="!rounded-none h-full ">
-                <img matCardImage src="../../../assets/images/{{project.image}}">
+                <img matCardImage src="../../../assets/images/{{project.image}}" placeholder>
                 <div class="bg-zinc-800 text-gray-300 p-3">
                     <mat-card-header class="flex flex-row flex-nowrap justify-between">
                         <mat-card-title class="text-white border-solid border-b-2">{{project.title}}</mat-card-title>
@@ -66,7 +66,7 @@
         <div id="carousel" class="relative overflow-hidden">
             <div id="slide-track" class="flex transition-transform duration-500 ease-in-out">
                 <div *ngFor="let image of images" class="min-w-full p-1">
-                    <img [src]="'../../../assets/images/' + image" class="w-full h-5/6">
+                    <img [src]="'../../../assets/images/' + image" class="w-full h-5/6" placeholder>
                 </div>
             </div>
             <!-- Navigation buttons -->
