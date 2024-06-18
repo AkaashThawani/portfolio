@@ -1,13 +1,13 @@
 <div class="home">
   <router-outlet></router-outlet>
-  <footer class="flex flex-row flex-wrap items-center justify-around text-white gap-1 p-4 bg-black">
+  <footer class="flex flex-row flex-nowrap items-center justify-around text-white gap-1 p-4 bg-black">
     <div>
       <img src="../assets/images/PSLOGO.png">
     </div>
     <div class="flex flex-row flex-wrap gap-4">
       @for (icon of icons; track icon) {
       <button mat-fab [matTooltip]="icon.tooltip" class="!bg-[#1a1a1a] pt-2 pb-2 pr-4 pl-4 text-gray-300 text-xl font-bold">
-        {{icon.text}}
+        <a href="{{icon.link}}" target="_blank">{{icon.text}}</a>
       </button>
       }
     </div>

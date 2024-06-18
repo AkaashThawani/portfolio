@@ -12,6 +12,6 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'portfolio';
 
-  icons=[{text:'Bē',tooltip:'Behance'},{text:'M',tooltip:'Medium'}]
+  icons=[{text:'Bē',tooltip:'Behance',link:'https://www.behance.net/pranjalsharma17'},{text:'M',tooltip:'Medium',link:'https://medium.com/@pranjalsharma1795'}]
 iconTooltip: any;
 }

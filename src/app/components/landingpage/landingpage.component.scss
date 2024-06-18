@@ -40,20 +40,34 @@
 
 
 .frame-images>img:hover {
-    transform: scale(1.3)
+    animation: scale 1s ease-in-out forwards
 }
+
+@keyframes scale {
+    to {
+        transform: scale(1.2);
+    }
+}
+
 
 .ux {
     font-family: monospace;
-    color: #D1D5DB; /* Default text color (text-gray-300) */
-    background: linear-gradient(90deg, 
-                                #ff4e50 0%,    /* red */
-                                #fcab10 20%,  /* orange */
-                                #ffea5b 40%,  /* yellow */
-                                #4caf50 60%,  /* green */
-                                #2196f3 80%,  /* blue */
-                                #9c27b0 100%  /* purple */
-                                );
+    color: #D1D5DB;
+    /* Default text color (text-gray-300) */
+    background: linear-gradient(90deg,
+            #ff4e50 0%,
+            /* red */
+            #fcab10 20%,
+            /* orange */
+            #ffea5b 40%,
+            /* yellow */
+            #4caf50 60%,
+            /* green */
+            #2196f3 80%,
+            /* blue */
+            #9c27b0 100%
+            /* purple */
+        );
     background-size: 400% 400%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -65,38 +79,139 @@
     0% {
         background-position: 0% 50%;
     }
+
     10% {
         background-position: 10% 50%;
     }
+
     20% {
         background-position: 20% 50%;
     }
+
     30% {
         background-position: 30% 50%;
     }
+
     40% {
         background-position: 40% 50%;
     }
+
     50% {
         background-position: 50% 50%;
     }
+
     60% {
         background-position: 60% 50%;
     }
+
     70% {
         background-position: 70% 50%;
     }
+
     80% {
         background-position: 80% 50%;
     }
+
     90% {
         background-position: 90% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
 }
 
-.div#project-cards > mat-card{
+.div#project-cards>mat-card {
     height: inherit !important;
+
 }
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide-in {
+    animation: fadeInSlideUp 2.5s ease-out;
+}
+
+.btnzoom:hover {
+    transform: scale(1.25) !important;
+    border: 1px solid rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.pCard {
+    box-shadow: 6px 6px 2px 1px rgb(83, 83, 83);
+}
+
+.pCard:hover {
+    box-shadow: 10px 10px 3px 2px rgb(84, 84, 84);
+}
+
+
+/* Carousel container styles */
+#carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Slide track styles */
+  #slide-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Each slide's styles */
+  #slide-track > div {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image styles */
+  #slide-track img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Navigation button styles */
+  #designsprint button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 1rem; /* Increased padding */
+    border-radius: 9999px; /* Fully rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  #designsprint button:hover {
+    background-color: rgba(71, 92, 122, 0.75); /* Darker on hover */
+  }
+  
+  #designsprint button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  #designsprint #prev {
+    left: 1rem; /* Adjusted to be slightly inside */
+  }
+  
+  #designsprint  #next {
+    right: 1rem; /* Adjusted to be slightly inside */
+  }
+  
+  #designsprint .mat-icon {
+    font-size: 2rem; /* Font size for icons */
+  }

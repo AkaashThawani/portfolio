@@ -2,9 +2,9 @@
     <section id="intro" class="text-gray-300">
         <div>
             <div class="md:text-6xl text-4xl sm:text-base">Pranjal Sharma</div>
-            <div class="mt-5 md:text-9xl text-4xl ux font-bold sm:text-2xl">UX Designer</div>
+            <div class="mt-5 md:text-9xl text-4xl ux font-bold sm:text-2xl pb-2">UX Designer</div>
         </div>
-        <mat-divider class="!mt-6 !mb-8"></mat-divider>
+        <mat-divider class="!mt-10 !mb-8"></mat-divider>
         <div class="text-4xl">
             IT'S A PLEASURE TO MEET YOU !
         </div>
@@ -31,15 +31,17 @@
             "TO BE A GOOD DESIGNER YOU MUST BE A GOOD ENGINEER IN EVERY SENSE:
             BRAVE, CURIOUS & INQUISITIVE."<br><br> - CHARLES EAMES, 1949
         </div>
+
         @for(project of projects;track project)
         {
-        <div id="project-cards" class="pb-10 h-4/5">
-            <mat-card class="!rounded-none shadow hover:cursor-pointer h-full">
-                <img  matCardImage src="../../../assets/images/{{project.image}}">
+        @defer(on viewport){
+        <div id="project-cards" class="mb-10 h-4/5 fade-slide-in pCard">
+            <mat-card class="!rounded-none h-full ">
+                <img matCardImage src="../../../assets/images/{{project.image}}">
                 <div class="bg-zinc-800 text-gray-300 p-3">
                     <mat-card-header class="flex flex-row flex-nowrap justify-between">
                         <mat-card-title class="text-white border-solid border-b-2">{{project.title}}</mat-card-title>
-                        <button mat-icon-button class="-mt-12 !bg-white hover:!bg-gray-50" matTooltip="View">
+                        <button mat-icon-button class="-mt-12 !bg-white btnzoom" matTooltip="View">
                             <mat-icon class="!text-black hover:!text-white">arrow_forward</mat-icon>
                         </button>
                     </mat-card-header>
@@ -49,20 +51,46 @@
                 </div>
             </mat-card>
         </div>
+        }@placeholder {
+        <img>
+        }
         }
 
     </section>
     <mat-divider class="!mt-8 !mb-8"></mat-divider>
+    <section id="designsprint" class="text-gray-300">
+        <span class="md:text-6xl text-4xl sm:text-base">Design Sprint</span>
+        <mat-divider class="!mt-8 !mb-8"></mat-divider>
+        <div class="text-center mb-8">Fun, fast UIs that I build in an hour
+            to strictly test my visual design skills!</div>
+        <div id="carousel" class="relative overflow-hidden">
+            <div id="slide-track" class="flex transition-transform duration-500 ease-in-out">
+                <div *ngFor="let image of images" class="min-w-full p-1">
+                    <img [src]="'../../../assets/images/' + image" class="w-full h-5/6">
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <button id="prev" (click)="prevSlide()"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-2"><mat-icon>chevron_left</mat-icon></button>
+            <button id="next" (click)="nextSlide()"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-2"><mat-icon>chevron_right</mat-icon></button>
+        </div>
+    </section>
+    <mat-divider class="!mt-8 !mb-8"></mat-divider>
     <section id="resume" class="cursor-pointer">
         <a href="https://read.cv/pranjal1795" target="_blank"
-            class="text-gray-300 hover:border-solid hover:border-b-2"><span class="md:text-6xl text-4xl sm:text-base">Resume</span><span>
-                <mat-icon inline="true" class="ml-4 md:!text-4xl !text-2xl sm:!text-xl">open_in_new</mat-icon></span></a>
+            class="text-gray-300 hover:border-solid hover:border-b-2"><span
+                class="md:text-6xl text-4xl sm:text-base">Resume</span><span>
+                <mat-icon inline="true"
+                    class="ml-4 md:!text-4xl !text-2xl sm:!text-xl">open_in_new</mat-icon></span></a>
     </section>
     <mat-divider class="!mt-8 !mb-8"></mat-divider>
     <section id="contact" class="cursor-pointer">
         <a href="https://www.linkedin.com/in/shr-pranjal" target="_blank"
-            class="text-gray-300 hover:border-solid hover:border-b-2"><span class="md:text-6xl text-4xl sm:text-base">Contact Me</span><span>
-                <mat-icon inline="true" class="ml-4 md:!text-4xl !text-2xl sm:!text-xl">open_in_new</mat-icon></span></a>
+            class="text-gray-300 hover:border-solid hover:border-b-2"><span
+                class="md:text-6xl text-4xl sm:text-base">Contact Me</span><span>
+                <mat-icon inline="true"
+                    class="ml-4 md:!text-4xl !text-2xl sm:!text-xl">open_in_new</mat-icon></span></a>
     </section>
     <mat-divider class="!mt-8 !mb-8"></mat-divider>
 </div>
