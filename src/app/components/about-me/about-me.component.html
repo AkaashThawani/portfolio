@@ -1,0 +1,110 @@
+<div class="main ">
+    @defer (on viewport) {
+    <section class="mb-10 ">
+        <a mat-button routerLink="/home" class="!text-white"> <mat-icon> keyboard_arrow_left </mat-icon> Back</a>
+    </section>
+    <section id="me" class="flex flex-row justify-between items-center mb-10 fade-slide-in">
+        <div id="image" class="w-4/12">
+            <img src="../../../assets/images/img1.jpg" class="h-auto w-80" alt="frame1" placeholder>
+        </div>
+        <div id="text" class=" p-10 w-8/12 text-white text-2xl">
+            As a UX designer, I aim to bridge the gap between users, businesses, and society for a protopian future.
+
+            Empathy is my compass—I observe users' journeys, acknowledging their diversity.
+
+            My role involves understanding complex systems, technical barriers and cultural nuances to create
+            user-centered solutions that resonate effectively from within.
+        </div>
+    </section>
+    }
+    @placeholder {
+    <div></div>
+    }
+    @defer (on viewport) {
+    <section id="college" class="flex flex-row justify-between items-center mt-20 mb-10 fade-slide-in">
+        <div id="text" class=" p-10 w-8/12 text-white text-2xl">
+            <p>
+                I am a strong & proud UVA Alum from the Architecture & Urban Planning/ Design
+                Class of 2020, forever shouting "Go Hoos!"
+            </p>
+            <p class="!text-base">
+                An enchanting compilation showcasing the pinnacle moments of my architectural and design school
+                journey—capturing the essence of project presentations, reviews, and the triumphant finale of
+                graduation.
+                 
+                After embarking on my design journey in 2020, I've seamlessly blended my passions for Architecture, Design,
+        Behavioral Science, and Business into a delightful role as a UX Designer.
+        My first significant project was with a SAAS B2C Tech Startup called PowerYou AI, where I designed both their
+        first website and iOS mobile app.
+
+        My design ethos revolves around the human touch. I always start by having a chat with the users involved. I
+        weave in Product Thinking for grander schemes, shifting to an adaptable approach as circumstances demand.
+
+        I have a soft spot for simplicity in solutions, as they tend to strike a chord with users, yielding powerful
+        results. Often, the simplest option is the wisest, and vice versa.
+
+        Outside of work, I'm an urban explorer at heart—I love travelling, eating, diving into history, and immersing
+        myself in different cultures.
+
+        I love watching Nigella Lawson cooking shows and make a lip-smacking "Butter Chicken" myself!
+
+        I like dogs, cats, birds but no reptiles, please...
+
+        Photography is another hobby of mine, feeding my curiosity and broadening my global perspective.
+
+        I also enjoy funny things, humor in life! I am a team cheerleader, Potterhead and a fashionista on budget!'
+            </p>
+        </div>
+        <div id="images" class="w-2/5 bg-black p-4">
+            <div class="c-row">
+                <div class="c-column">
+                    <img src="../../../assets/images/img2.jpg" alt="frame1" placeholder>
+                    <img src="../../../assets/images/img3.jpg" alt="frame1" placeholder>
+                </div>
+                <div class="c-column">
+                    <img src="../../../assets/images/img4.jpg">
+                    <img src="../../../assets/images/img5.jpg">
+                </div>
+                <div class="c-column">
+                    <img src="../../../assets/images/img6.jpg">
+                    <img src="../../../assets/images/img7.jpg">
+                </div>
+                <div class="c-column">
+                    <img src="../../../assets/images/img8.jpg">
+                    <img src="../../../assets/images/img9.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    }@placeholder {
+    <span></span>
+    }
+    @defer (on viewport) {
+    <section id="skill-tools">
+        <span id="skills" class="flex flex-row justify-start items-center">
+            <span class="text-white mr-8"> Skills </span>
+            <span>
+                <mat-chip-set id="skill-list">
+                    @for (skill of skillList; track skill) {
+                    <mat-chip class="fade-slide-in">{{skill}}</mat-chip>
+                    }
+                </mat-chip-set>
+            </span>
+        </span>
+        <span id="skills" class="flex flex-row justify-start items-center mt-10">
+            <span class="text-white mr-8"> Tools </span>
+            <span>
+                <mat-chip-set id="skill-list">
+                    @for (tool of toolList; track tool) {
+                    <mat-chip>{{tool}}</mat-chip>
+                    }
+                </mat-chip-set>
+            </span>
+        </span>
+    </section>
+    }
+    @placeholder {
+    <span></span>
+    }
+  
+</div>

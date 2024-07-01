@@ -6,7 +6,8 @@
     </div>
     <div class="flex flex-row flex-wrap gap-4">
       @for (icon of icons; track icon) {
-      <button mat-fab [matTooltip]="icon.tooltip" class="!bg-[#1a1a1a] pt-2 pb-2 pr-4 pl-4 text-gray-300 text-xl font-bold">
+      <button mat-fab [matTooltip]="icon.tooltip"
+        class="!bg-[#1a1a1a] !text-white pt-2 pb-2 pr-4 pl-4 text-gray-300 text-xl font-bold">
         <a href="{{icon.link}}" target="_blank">{{icon.text}}</a>
       </button>
       }

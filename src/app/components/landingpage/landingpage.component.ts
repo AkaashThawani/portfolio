@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Input, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -20,6 +21,7 @@ import { Input, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
     MatTooltipModule,
     NgFor,
     NgOptimizedImage,
+    RouterLink
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',

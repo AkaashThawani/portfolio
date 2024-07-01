@@ -4,7 +4,19 @@
 }
 
 .footer {
-
     background-color: black;
     height: 25vh;
+}
+
+.f {
+    position: fixed;
+    width: 100%;
+    transition: 0.2s linear;
+    top: 0px;
+}
+
+.nf {
+    position: static;
+    transition: 0.2s linear;
+    top: -60px;
 }

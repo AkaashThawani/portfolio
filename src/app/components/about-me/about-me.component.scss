@@ -1,0 +1,81 @@
+.main {
+    height: min-content;
+    width: 100vw;
+    padding: 5% 12%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.c-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.c-column {
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.c-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.c-column img:hover {
+    background-color: black;
+    padding: 8px;
+    animation: scale 0.5s ease-in-out forwards
+}
+
+@keyframes scale {
+    to {
+        transform: scale(2);
+    }
+}
+
+mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip {
+    border: 2px solid white !important;
+    padding: 8px;
+    color: white !important;
+}
+
+mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip:hover {
+    background-color: white;
+}
+
+mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip .mdc-evolution-chip__text-label
+{
+    color: white !important;
+}
+
+mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip:hover .mdc-evolution-chip__text-label
+{
+    color: black !important;
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide-in {
+    animation: fadeInSlideUp 1.5s ease-out;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
