@@ -44,8 +44,8 @@
                 <img matCardImage src="../../../assets/images/{{project.image}}" placeholder>
                 <div class="bg-zinc-800 text-gray-300 p-3">
                     <mat-card-header class="flex flex-row flex-nowrap justify-between">
-                        <mat-card-title class="text-white border-solid border-b-2">{{project.title}}</mat-card-title>
-                        <button mat-icon-button class="-mt-12 !bg-white btnzoom" matTooltip="View">
+                        <mat-card-title class="text-white">{{project.title}}</mat-card-title>
+                        <button routerLink="/project/test" mat-icon-button class="-mt-12 !bg-white btnzoom" matTooltip="View">
                             <mat-icon class="!text-black hover:!text-white">arrow_forward</mat-icon>
                         </button>
                     </mat-card-header>
@@ -82,8 +82,7 @@
     </section>
     <mat-divider class="!mt-8 !mb-8"></mat-divider>
     <section id="resume" class="cursor-pointer">
-        <a routerLink="/about-me"
-            class="text-gray-300 hover:border-solid hover:border-b-2"><span
+        <a routerLink="/about-me" class="text-gray-300 hover:border-solid hover:border-b-2"><span
                 class="md:text-6xl text-4xl sm:text-base">About Me</span></a>
     </section>
     <mat-divider class="!mt-8 !mb-8"></mat-divider>

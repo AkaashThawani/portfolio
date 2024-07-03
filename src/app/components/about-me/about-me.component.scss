@@ -27,6 +27,7 @@
 .c-column img:hover {
     background-color: black;
     padding: 8px;
+    z-index: 10;
     animation: scale 0.5s ease-in-out forwards
 }
 
@@ -36,23 +37,21 @@
     }
 }
 
-mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip {
+mat-chip-set#skill-list>.mdc-evolution-chip-set__chips>mat-chip.mat-mdc-standard-chip {
     border: 2px solid white !important;
     padding: 8px;
     color: white !important;
 }
 
-mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip:hover {
+mat-chip-set#skill-list>.mdc-evolution-chip-set__chips>mat-chip.mat-mdc-standard-chip:hover {
     background-color: white;
 }
 
-mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip .mdc-evolution-chip__text-label
-{
+mat-chip-set#skill-list>.mdc-evolution-chip-set__chips>mat-chip.mat-mdc-standard-chip .mdc-evolution-chip__text-label {
     color: white !important;
 }
 
-mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-standard-chip:hover .mdc-evolution-chip__text-label
-{
+mat-chip-set#skill-list>.mdc-evolution-chip-set__chips>mat-chip.mat-mdc-standard-chip:hover .mdc-evolution-chip__text-label {
     color: black !important;
 }
 
@@ -73,9 +72,53 @@ mat-chip-set#skill-list > .mdc-evolution-chip-set__chips > mat-chip.mat-mdc-stan
 }
 
 @keyframes slide-in {
-    100% { transform: translateX(0%); }
+    100% {
+        transform: translateX(0%);
+    }
 }
+
 .slide-in {
     animation: slide-in 0.5s forwards;
     -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-down {
+    overflow: hidden;
+}
+
+.slide-down div#text {
+    animation: 1.5s slide-down 1s forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes slide-down {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide-right#text {
+    animation: 1.5s slide-right 1.5s forwards;
+    transform: translateX(-150%);
+    animation-timeline: view(40px 0px);
+    animation-range: entry 10%;
+}
+
+@keyframes slide-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    animation: 2s slide-left 2s forwards;
+    transform: translateX(400%);
+    overflow: auto;
+    animation-timeline: scroll();
+}
+
+@keyframes slide-left {
+    to {
+        transform: translateX(0);
+    }
 }

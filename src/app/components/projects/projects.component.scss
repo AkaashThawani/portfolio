@@ -1,0 +1,123 @@
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5% 4% 5% 16%;
+    gap: 6%;
+    scroll-behavior: smooth !important;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.project-details>* {
+    padding: 16px 0px;
+    font-size: x-large;
+}
+
+.project-details>section.detail-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-details>section.detail-row .heading {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.project-details>section.detail-row .info {
+    color: rgb(150, 154, 159);
+    margin-bottom: 10px;
+}
+
+
+.project-details>section.detail-row>* {
+    width: 49%;
+}
+
+nav.project-nav {
+    position: fixed;
+    top: 140px;
+    left: 20px;
+}
+
+nav.project-nav ul>li {
+    padding: 5px 12px;
+
+}
+
+nav.project-nav ul>li:hover {
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+div#casestudy button {
+    width: 100%;
+    padding: 10%;
+}
+
+div#casestudy button.mdc-button .mdc-button__label,
+.mat-icon {
+    color: white !important;
+}
+
+
+.slide-left {
+    overflow: hidden;
+    animation: slide-left 4s linear;
+    animation-timeline: view(500px 0px);
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.scroll-watcher{
+    height: 4px;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    background-color: #676767;
+    width: 100%;
+    scale: .03 1;
+    transform-origin: left;
+    animation: scrollwatcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scrollwatcher {
+    to{
+        scale: 1 1;
+    }
+}
